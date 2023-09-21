@@ -21,3 +21,10 @@
 3. RecyclerView 구성요소
 
     <img src= "https://github.com/Seoin-A/TodoList/assets/129828463/ad1636b9-2953-4da7-98fb-5e908beeb934" width = "50%" hight = "30%">
+
+<br>
+
+4. Annotation
+    - 자바(코틀린) 코드에 추가할 수 있는 메타데이터의 한 형태  
+    - 보일러 플레이트 코드를 줄여 간결한 코드 작성 가능
+    - Room, Retrofit 라이브러리에서 자주 사용
