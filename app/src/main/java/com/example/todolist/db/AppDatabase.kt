@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 
 @Database(entities = arrayOf(TodoEntity::class), version = 1) // 조건 10
 abstract class AppDatabase : RoomDatabase() { // 조건2 RoomDatabase 상속
-    abstract fun getTOdoDao() : TodoDao
+    abstract fun getTodoDao() : TodoDao
 
     companion object { // 싱글톤 패턴 구현
         val databaseName = "db_todo"
