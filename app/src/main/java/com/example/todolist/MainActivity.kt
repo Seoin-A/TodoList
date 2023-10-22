@@ -3,6 +3,8 @@ package com.example.todolist
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.LinearLayout
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.todolist.databinding.ActivityMainBinding
 import com.example.todolist.db.AppDatabase
 import com.example.todolist.db.TodoDao
@@ -31,10 +33,19 @@ class MainActivity : AppCompatActivity() {
         Thread{
             todoList = ArrayList(todoDao.getAllTodo())
             setRecyclerView()
-        }
+        }.start()
     }
 
     private fun setRecyclerView(){
+        runOnUiThread {
+            adapter = TodoRecyclerViewAdapter(todoList)
+            binding.recyclerview.adapter = adapter
+            binding.recyclerview.layoutManager = LinearLayoutManager(this)
+        }
+    }
 
+    override fun onRestart() {
+        super.onRestart()
+        getAllTodoList()
     }
 }
