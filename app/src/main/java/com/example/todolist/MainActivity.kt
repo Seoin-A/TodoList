@@ -1,5 +1,6 @@
 package com.example.todolist
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -27,6 +28,12 @@ class MainActivity : AppCompatActivity() {
         db = AppDatabase.getInstance(this)!! // db 설정
         todoDao = db.getTodoDao()
         getAllTodoList() // todoList 가져오기
+
+        binding.btnAddTodo.setOnClickListener{
+            val intent = Intent(this,AddTodoActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun getAllTodoList(){
