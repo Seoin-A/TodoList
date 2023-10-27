@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.todolist.databinding.ActivityMainBinding
 import com.example.todolist.db.AppDatabase
 import com.example.todolist.db.TodoDao
 import com.example.todolist.db.TodoEntity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() , OnItemLongClickListener {
 
     private lateinit var binding : ActivityMainBinding
     private lateinit var db : AppDatabase
@@ -54,5 +55,14 @@ class MainActivity : AppCompatActivity() {
     override fun onRestart() {
         super.onRestart()
         getAllTodoList()
+    }
+
+    override fun onLongClick(position: Int) {
+        val builder : AlertDialog.Builder = AlertDialog.Builder(this)
+        builder.setTitle(getString(R.string.alert_title))
+        builder.setMessage(getString(R.string.alert_message))
+        builder.setNegativeButton(getString(R.string.alert_no))
+        builder.setPositiveButton(getString(R.string.alert_yes),
+            object)
     }
 }
