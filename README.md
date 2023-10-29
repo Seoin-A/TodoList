@@ -58,6 +58,19 @@
   
 2. RecyclerView
     - ![image](https://github.com/Seoin-A/TodoList/assets/129828463/8d586c34-014c-47e2-8a4c-df170e276f0e)
+    - onCreateViewHolder : View holder 객체 생성
+    - onBindViewHolder : View holder 객체와 Data의 연결
+
+3. ViewBinding
+    - activity_main.xml -> ActivityMainBinding Class 자동생성
+    - id : tv_title -> tvTitle 변수 생성
+  
+4. Ui
+    - ![image](https://github.com/Seoin-A/TodoList/assets/129828463/6ae70880-9ec0-4cf5-8026-750dc9b095fc)
+
+
+## Error
+- Room cannot verify the data integrity : 기존의 DB와 설치한 DB의 충돌 문제 -> App inpo에서 cache 날림
      
 
 
