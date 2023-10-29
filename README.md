@@ -45,3 +45,19 @@
 7. Companion Object
    - 어떤 클래스의 모든 인스턴스가 공유하는 객체를 만들고 싶을 때 사용
    - 클래스당 한 개만 가질 수 있다.
+<br><br><br>
+
+
+
+## Wrap - up
+
+1. Room 지속성 라이브러리
+   - 스마트폰 내장 DB에 데이터를 쉽게 저장할 수 있도록 해주는 라이브러리
+   - Entity, DAO, DB로 구성
+   - DB 관련 작업은 백그라운드 스레드에서 실행
+  
+2. RecyclerView
+    - ![image](https://github.com/Seoin-A/TodoList/assets/129828463/8d586c34-014c-47e2-8a4c-df170e276f0e)
+     
+
+
